@@ -8,6 +8,7 @@ public class Shooter : MonoBehaviour
     const int RecoverySeconds = 3;
 
     int shotPower = MaxShotPower;
+    AudioSource shotSound;
 
     public GameObject[] candyPrefabs;
     public Transform candyParentTransform;
@@ -18,7 +19,7 @@ public class Shooter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        shotSound = GetComponent<AudioSource>();
     }
 
     
@@ -52,11 +53,13 @@ public class Shooter : MonoBehaviour
         candy.transform.parent = candyParentTransform;
 
         Rigidbody candyRigidBody = candy.GetComponent<Rigidbody>();
-        candyRigidBody.AddForce(transform.forward * shotForce);
+        candyRigidBody.AddForce(transform.forward * shotForce); //transform forward (forward = Z軸)カメラ方向で見るとZ軸が"後ろに見える"
         candyRigidBody.AddTorque(new Vector3(0, shotTorque,0));
 
         candyManager.ConsumeCandy();
         ConsumePower();
+
+        shotSound.Play();
     }
 
     void OnGUI(){
