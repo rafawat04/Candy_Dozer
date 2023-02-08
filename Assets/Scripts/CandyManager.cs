@@ -29,6 +29,7 @@ public class CandyManager : MonoBehaviour
         GUI.color = Color.black;
 
         string label = "Candy : " + candy;
+        // string label = $"Candy :{candy}";
 
         if(counter >0) label = label + "(" + counter +"s)";
 
