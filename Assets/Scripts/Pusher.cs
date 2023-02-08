@@ -19,6 +19,7 @@ public class Pusher : MonoBehaviour
     void Update()
     {
         float z = amplitude * Mathf.Sin(Time.time * speed);
+        //Time はゲーム始まる時間のことを指している
 
         transform.localPosition = startPosition + new Vector3(0,0,z);
     }

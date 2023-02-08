@@ -173,6 +173,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   candyManager: {fileID: 1993139979}
   reward: 0
+  effectPrefab: {fileID: 0}
+  effectRotation: {x: 0, y: 0, z: 0}
 --- !u!4 &100324413
 Transform:
   m_ObjectHideFlags: 0
@@ -2344,6 +2346,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   candyManager: {fileID: 1993139979}
   reward: 3
+  effectPrefab: {fileID: 3359776113496496157, guid: 9090fabf70c994032ada6c3b0ff934dc, type: 3}
+  effectRotation: {x: -90, y: 0, z: 0}
 --- !u!1 &1696365098
 GameObject:
   m_ObjectHideFlags: 0
